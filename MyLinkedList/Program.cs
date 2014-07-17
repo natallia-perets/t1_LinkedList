@@ -8,30 +8,21 @@ namespace MyLinkedList
 {
     class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            LinkedList<int> list = new LinkedList<int>();
-            list.Add(1);
-            list.Add(3);
-            list.Add(8);
-            list.Add(9);
-            list.Add(15);
-            //System.Console.WriteLine(list.GetSize());
-            for (int i = 1; i <= list.GetSize(); i++)
+            LinkedList<Person> plist = new LinkedList<Person>();
+            plist.Add(new Person("Enn", "B", 19));
+            plist.Add(new Person("Ann", "B", 18));
+            plist.Add(new Person("Re", "E", 18));
+            for (int i = 0; i < plist.GetSize(); i++)
             {
-              System.Console.WriteLine(list.GetElement(i));
-            } 
-            System.Console.WriteLine(list.GetSize());
-            
-            list.DeleteElement(2);
-            list.DeleteElement(3);
-            System.Console.WriteLine();
-            /*for (int i = 1; i <= list.GetSize(); i++)
+                Console.WriteLine(plist[i].FirstName);
+            }
+            LinkedList<Person>.FirstNameSort(plist);
+            for (int i = 0; i < plist.GetSize(); i++)
             {
-                System.Console.WriteLine(list.GetElement(i));
-            }*/
-            System.Console.WriteLine(list.GetSize());
-            System.Console.WriteLine(list[0]);
+                Console.WriteLine(plist[i].FirstName);
+            }
             System.Console.ReadLine();
         }
     }

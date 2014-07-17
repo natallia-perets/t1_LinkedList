@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace MyLinkedList
 {
     internal class LinkedList<T>
@@ -125,6 +126,22 @@ namespace MyLinkedList
                     currentNode = currentNode.Next;
                 }
                 currentNode.Data = value;
+            }
+        }
+
+        public static void FirstNameSort(LinkedList<Person> list)
+        {
+            Person.FirstNameSortHelper sort = new Person.FirstNameSortHelper();
+            Person temp;
+            int j;
+            for (int i = 0; i < list.GetSize(); i++)
+            {
+                temp = list[i];
+                for (j = i - 1; j >= 0 && ((sort.Compare(list[j], temp) == 1)); j--)
+                {
+                    list[j + 1] = list[j];
+                }
+                list[j + 1] = temp;
             }
         }
 
