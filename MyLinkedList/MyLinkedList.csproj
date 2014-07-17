@@ -41,6 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgeSortComparer.cs" />
+    <Compile Include="DescFirstNamePersonComparer.cs" />
+    <Compile Include="FirstNamePersonComparer.cs" />
+    <Compile Include="LastNameSortComparer.cs" />
     <Compile Include="LinkedList.cs" />
     <Compile Include="Node.cs" />
     <Compile Include="Person.cs" />
