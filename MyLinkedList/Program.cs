@@ -26,11 +26,12 @@ namespace MyLinkedList
             list.DeleteElement(2);
             list.DeleteElement(3);
             System.Console.WriteLine();
-            for (int i = 1; i <= list.GetSize(); i++)
+            /*for (int i = 1; i <= list.GetSize(); i++)
             {
                 System.Console.WriteLine(list.GetElement(i));
-            }
+            }*/
             System.Console.WriteLine(list.GetSize());
+            System.Console.WriteLine(list[0]);
             System.Console.ReadLine();
         }
     }

@@ -77,11 +77,11 @@ namespace MyLinkedList
 
     }
         public T GetElement(int number)
-           //how to process exception??
         {
             if (number < 0 || number > size)
                {
                     throw new IndexOutOfRangeException();
+                    //return default.T;
                }
             else
                {
@@ -96,6 +96,36 @@ namespace MyLinkedList
                 }
            
       
+        }
+
+        public T this[int index]
+        {
+            get
+            {
+                if (index >= size || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Out of range!");
+                }
+                Node<T> currentNode = head;
+                for (int i = 0; i < index; i++)
+                {
+                    currentNode = currentNode.Next;
+                }
+                return currentNode.Data;
+            }
+            set
+            {
+                if (index >= size || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Out of range!");
+                }
+                Node<T> currentNode = head;
+                for (int i = 0; i < index; i++)
+                {
+                    currentNode = currentNode.Next;
+                }
+                currentNode.Data = value;
+            }
         }
 
     }
