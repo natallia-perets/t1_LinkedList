@@ -15,26 +15,28 @@ namespace MyLinkedList
         public Node(T data)
         {
             this.data = data;
-            this.next = null;
-            this.prev = null;
+            next = null;
+            prev = null;
         }
         public T Data
         {
-            get { return this.data; }
-            set { this.data = value; }
+            get { return data; }
+            set { data = value; }
         }
 
         public Node<T> Next
         {
-            get { return this.next; }
-            set { this.next = value; }
+            get { return next; }
+            set { next = value; }
         }
 
         public Node<T> Previous
         {
-            get { return this.prev; }
-            set { this.prev = value; }
+            get { return prev; }
+            set { prev = value; }
         }
+
+
     }
 
 
